@@ -1,0 +1,53 @@
+<div class="pt-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <!-- Welcome Section -->
+    <div class="lg:col-span-3 p-6 bg-white rounded-2xl shadow-lg flex items-center justify-between">
+        <div>
+            <h2 class="text-2xl font-bold">Welcome Jonathan Deo</h2>
+            <p class="text-gray-500">Check all the statistics</p>
+            <button class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-full">Visit Now</button>
+        </div>
+        <img src="path-to-illustration-image.png" alt="Illustration" class="w-32 h-auto">
+    </div>
+
+    <!-- Statistics Summary Cards -->
+    <div class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div *ngFor="let stat of stats" class="p-4 bg-blue-500 rounded-xl shadow-md text-center text-white">
+            <div class="mb-2">
+                <fa-icon [icon]="stat.icon" class="text-3xl"></fa-icon>
+            </div>
+            <h3 class="text-lg font-semibold">{{ stat.value }}</h3>
+            <p>{{ stat.title }}</p>
+            <p class="mt-1 {{ stat.color }}">{{ stat.percentage }}</p>
+        </div>
+    </div>
+
+    <!-- Profit & Expenses Section -->
+    <div class="lg:col-span-2 p-6 bg-white rounded-2xl shadow-lg">
+        <h3 class="text-lg font-bold mb-4">Profit & Expenses</h3>
+        <div class="flex items-center justify-between">
+            <!-- Placeholder for a bar chart -->
+            <div class="bg-gray-100 w-2/3 h-40 rounded-lg flex items-center justify-center">
+                <p class="text-gray-400">[Bar Chart]</p>
+            </div>
+            <!-- Earnings Info -->
+            <div class="space-y-4 ml-4">
+                <div *ngFor="let data of profitData" class="text-right">
+                    <h4 class="text-xl font-bold">{{ data.value }}</h4>
+                    <p class="text-gray-500">{{ data.label }}</p>
+                    <p class="text-green-500">{{ data.change }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Sales Section -->
+    <div class="p-6 bg-white rounded-2xl shadow-lg">
+        <h3 class="text-lg font-bold mb-4">{{ salesGrowth.title }}</h3>
+        <div class="flex items-center justify-between">
+            <!-- Placeholder for line chart -->
+            <div class="bg-gray-100 w-full h-40 rounded-lg flex items-center justify-center">
+                <p class="text-gray-400">[Line Chart]</p>
+            </div>
+        </div>
+    </div>
+</div>

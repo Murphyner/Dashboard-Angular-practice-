@@ -1,0 +1,41 @@
+<nav class="flex w-full items-center justify-between p-4 bg-white shadow-lg rounded-3xl">
+    <!-- Left Section: Icon and Links -->
+    <div class="flex items-center space-x-4">
+        <!-- Menu Icon -->
+        <button class="text-gray-600 pr-2" (click)="toggleBoolean()">
+            <fa-icon [icon]="faBars" class="text-xl"></fa-icon>
+        </button>
+
+        <!-- Links -->
+        <div class="space-x-4 text-gray-800 hidden xl:flex">
+            <a href="#" class="hover:text-gray-600">Apps <span>▼</span></a>
+            <a href="#" class="hover:text-gray-600">Chat</a>
+            <a href="#" class="hover:text-gray-600">Calendar</a>
+            <a href="#" class="hover:text-gray-600">Email</a>
+        </div>
+    </div>
+
+    <!-- Middle Section: Search Box -->
+    
+
+    <!-- Right Section: Icons and Profile -->
+    <div class="flex items-center space-x-4">
+        <div class="flex items-center border-[1px] w-[40%] border-black rounded-2xl px-4 py-1">
+            <fa-icon [icon]="faSearch" class="text-gray-500 mr-2"></fa-icon>
+            <input type="text" placeholder="Try to Searching..." class="bg-transparent rounded-2xl focus:outline-none text-gray-700" />
+        </div>
+        <!-- Language and Other Icons -->
+        <fa-icon [icon]="faFlag" class="text-gray-600"></fa-icon>
+        <fa-icon [icon]="faCommentDots" class="text-gray-600"></fa-icon>
+        <fa-icon [icon]="faThLarge" class="text-gray-600"></fa-icon>
+
+        <!-- Profile Section -->
+        <div class="flex items-center space-x-2">
+            <img src="https://via.placeholder.com/40" alt="Profile" class="w-10 h-10 rounded-full" />
+            <div class="text-left">
+                <p class="text-gray-800 font-semibold">Mike Nielsen</p>
+                <p class="text-gray-500 text-sm">Admin</p>
+            </div>
+        </div>
+    </div>
+</nav>

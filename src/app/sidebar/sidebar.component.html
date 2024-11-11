@@ -1,0 +1,94 @@
+<div [ngClass]="collapsed ? 'w-16' : 'w-56'"
+    class="transition-all overflow-hidden overflow-y-scroll      scrollable-div duration-300 h-full bg-white hover:w-56 hover:sticky hover:z-10 rounded-2xl shadow-lg flex flex-col pr-3 py-4"
+    >
+
+    <!-- Logo -->
+    <div class="flex items-center justify-center space-x-2 mb-8 overflow-hidden">
+        <div>
+            <fa-icon [icon]="faPlane" class="text-2xl text-blue-500"></fa-icon>
+        </div>
+        <h3 (click)="toggle()" [ngClass]="collapsed ? 'opacity-0 w-0' : 'block opacity-100'" class="whitespace-nowrap transition-all duration-500   text-xl font-bold">Admin(Close)</h3>
+    </div>
+
+    <!-- Menu Sections -->
+    <div class="space-y-4 flex-grow whitespace-nowrap">
+
+        <!-- Home Section -->
+        <p class="text-xs text-center font-bold text-gray-500 mb-2">HOME</p>
+        <a [routerLink]="['/dash1']"
+            [ngClass]="currentRouter === '/dash1' ? 'bg-blue-100': 'bg-transparent'"
+            class="relative flex items-center group overflow-hidden justify-center px-2 space-x-2 rounded-r-3xl py-3 transition-all duration-500 text-blue-600 ">
+            <fa-icon [icon]="faGaugeSimple"></fa-icon>
+            <span [ngClass]="collapsed ? 'w-0 opacity-0' : 'opacity-100 transition-all duration'">Dashboard 1</span>
+        </a>
+
+        <a [routerLink]="['/dash2']"
+            [ngClass]="currentRouter === '/dash2' ? 'bg-blue-100' : 'bg-transparent group'"
+             class="relative flex items-center  justify-center rounded-r-3xl py-3  text-gray-600">
+            <div class="flex space-x-2">
+                <fa-icon [icon]="faChartLine"></fa-icon>
+                <span *ngIf="!collapsed">Dashboard 2</span>
+            </div>
+            <div
+                class="absolute -z-10 inset-0 w-0 group-hover:w-full rounded-r-3xl transition-all duration-500 bg-blue-500">
+            </div>
+        </a>
+
+        <!-- Apps Section -->
+        <p class="text-xs text-center font-bold text-gray-500 mb-2">APPS</p>
+        <a href="#" class="relative flex items-center group justify-center p-2 rounded-lg text-gray-600">
+            <div class="flex space-x-2">
+                <fa-icon [icon]="faComments"></fa-icon>
+                <span *ngIf="!collapsed">Chat</span>
+            </div>
+            <div
+                class="absolute -z-10 inset-0 w-0 group-hover:w-full rounded-r-3xl transition-all duration-500 bg-blue-500">
+            </div>
+        </a>
+        <a href="#" class="relative flex items-center group justify-center p-2 rounded-lg text-gray-600">
+           <div class="flex space-x-2">
+                <fa-icon [icon]="faCalendarAlt"></fa-icon>
+                <span *ngIf="!collapsed">Calendar</span>
+           </div>
+            <div
+                class="absolute -z-10 inset-0 w-0 group-hover:w-full rounded-r-3xl transition-all duration-500 bg-blue-500">
+            </div>
+        </a>
+        <a href="#" class="relative flex items-center group justify-center p-2 rounded-lg text-gray-600">
+            <div class="flex space-x-2">
+                <fa-icon [icon]="faEnvelope"></fa-icon>
+                <span *ngIf="!collapsed">Email</span>
+            </div>
+            <div
+                class="absolute -z-10 inset-0 w-0 group-hover:w-full rounded-r-3xl transition-all duration-500 bg-blue-500">
+            </div>
+        </a>
+        <a href="#" class="relative flex items-center group justify-center p-2 rounded-lg text-gray-600">
+            <div class="flex space-x-2">
+                <fa-icon [icon]="faPhone"></fa-icon>
+                <span *ngIf="!collapsed">Phone</span>
+            </div>
+            <div
+                class="absolute -z-10 inset-0 w-0 group-hover:w-full rounded-r-3xl transition-all duration-500 bg-blue-500">
+            </div>
+        </a>
+        <a href="#" class="relative flex items-center group justify-center p-2 rounded-lg text-gray-600">
+           <div class="flex space-x-2">
+                <fa-icon [icon]="faCommentDots"></fa-icon>
+                <span *ngIf="!collapsed">Messages</span>
+           </div>
+            <div
+                class="absolute -z-10 inset-0 w-0 group-hover:w-full rounded-r-3xl transition-all duration-500 bg-blue-500">
+            </div>
+        </a>
+        <a href="#" class="relative flex items-center group justify-center p-2 rounded-lg text-gray-600">
+            <div class="flex space-x-2">
+                <fa-icon [icon]="faShieldAlt"></fa-icon>
+                <span *ngIf="!collapsed">Security</span>
+            </div>
+            <div
+                class="absolute -z-10 inset-0 w-0 group-hover:w-full rounded-r-3xl transition-all duration-500 bg-blue-500">
+            </div>
+        </a>
+    </div>
+</div>

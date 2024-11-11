@@ -1,0 +1,84 @@
+<div class="pt-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <!-- Greeting and Orders Overview (Left Column) -->
+    <div class="space-y-6">
+        <!-- User Greeting Section -->
+        <div class="p-6 bg-white rounded-2xl shadow-lg flex flex-col items-center text-center">
+            <h2 class="text-xl font-bold">Congratulations Jonathan</h2>
+            <p class="text-gray-500">You have done 38% more sales</p>
+            <img src="path-to-illustration-image.png" alt="Illustration" class="w-32 mt-4">
+        </div>
+
+        <!-- Orders Overview Section -->
+        <div class="p-6 bg-white rounded-2xl shadow-lg">
+            <h3 class="text-lg font-bold mb-4">Total Orders</h3>
+            <p class="py-2  font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, porro.</p>
+            <div class="flex flex-col space-y-4">
+                <div class="flex items-center space-x-2">
+                    <div class="text-green-500"><fa-icon [icon]="faShoppingBag"></fa-icon></div>
+                    <div>
+                        <p class="text-lg font-bold">64 new orders</p>
+                        <p class="text-gray-500">Processing</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <div class="text-yellow-500"><fa-icon [icon]="faPauseCircle"></fa-icon></div>
+                    <div>
+                        <p class="text-lg font-bold">4 orders</p>
+                        <p class="text-gray-500">On hold</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <div class="text-blue-500"><fa-icon [icon]="faCheckCircle"></fa-icon></div>
+                    <div>
+                        <p class="text-lg font-bold">12 orders</p>
+                        <p class="text-gray-500">Delivered</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Summary Cards and Chart (Center and Right Columns) -->
+    <div class="col-span-2 grid grid-cols-2 gap-6">
+        <!-- Payments Summary Card -->
+        <div class="p-4 bg-white rounded-2xl shadow-md flex flex-col items-center text-center">
+            <div class="text-yellow-500">
+                <fa-icon [icon]="faMoneyBill"></fa-icon>
+            </div>
+            <h3 class="text-lg font-semibold">Payments</h3>
+            <p class="text-2xl font-bold">12,389</p>
+            <p class="text-red-500">-3.8%</p>
+            <p class="text-gray-500">Last 7 days</p>
+        </div>
+
+        <!-- Products Summary Card -->
+        <div class="p-4 bg-white rounded-2xl shadow-md flex flex-col items-center text-center">
+            <div class="text-green-500">
+                <fa-icon [icon]="faBox"></fa-icon>
+            </div>
+            <h3 class="text-lg font-semibold">Products</h3>
+            <p class="text-2xl font-bold">432</p>
+            <p class="text-green-500">+26.5%</p>
+            <p class="text-gray-500">Last 7 days</p>
+        </div>
+
+        <!-- Chart Section Placeholder -->
+        <div class="p-6 bg-white rounded-2xl shadow-lg text-center">
+            <h3 class="text-lg font-bold">Latest Deal</h3>
+            <p class="text-gray-500">Last 7 days</p>
+            <!-- Insert a chart here if needed, or use placeholder -->
+            <div class="mt-4 h-32 bg-gray-100 rounded-xl">[Chart Placeholder]</div>
+        </div>
+
+        <!-- Customers Summary Card -->
+        <div class="p-4 bg-white rounded-2xl shadow-md flex flex-col items-center text-center">
+            <div class="text-blue-500">
+                <fa-icon [icon]="faUsers"></fa-icon>
+            </div>
+            <h3 class="text-lg font-semibold">Customers</h3>
+            <p class="text-2xl font-bold">6,380</p>
+            <p class="text-green-500">+26.5%</p>
+            <p class="text-gray-500">Last 7 days</p>
+        </div>
+    </div>
+</div>
